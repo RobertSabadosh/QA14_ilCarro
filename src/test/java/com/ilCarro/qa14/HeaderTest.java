@@ -29,4 +29,16 @@ public class HeaderTest extends TestBase {
         wd.findElement(By.cssSelector("[href='/login']")).click();
         Assert.assertTrue(isElementPresent(By.cssSelector(".signup__fields")));
     }
+
+    @Test
+    public void findTermsOfUseTabTest() {
+        click(By.xpath("//ul[@class='header__nav desktop']/li[3]"));
+        Assert.assertTrue(isElementPresent1(By.xpath("//div[contains(.,'Terms')]")));
+    }
+
+    @Test
+    public void findSearchTest() {
+        click(By.xpath("//ul[@class='header__nav desktop']/li[1]"));
+        Assert.assertTrue(isElementPresent1(By.cssSelector(".search-sidebar__content")));
+    }
 }
