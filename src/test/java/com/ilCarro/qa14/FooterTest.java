@@ -10,6 +10,6 @@ public class FooterTest extends TestBase {
     public void footerTest() {
         jumpToFooter();
         wd.findElement(By.cssSelector(".active")).click();
-        Assert.assertTrue(isElementPresent(By.cssSelector(".Main_mainpage__find_your_car__AHLkw")));
+        Assert.assertTrue(isFindCarFormPresent());
     }
 }
